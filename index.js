@@ -13,15 +13,15 @@ function submitData(name, email) {
   })
     .then((res) => res.json())
     .then((data) => {
-      const newId = data.id;
-      const idElement = document.createElement("p");
-      idElement.textContent = newId;
-      document.body.appendChild(idElement);
+      const newItem = data.id;
+      const newElement = document.createElement("p");
+      newElement.textContent = newItem;
+      document.body.appendChild(newElement);
     })
 
     .catch((error) => {
-      const idElement = document.createElement("p");
-      idElement.textContent = `Error: ${error.message}`;
-      document.body.appendChild(idElement);
+      const newElement = document.createElement("p");
+      newElement.textContent = `Error: ${error.message}`;
+      document.body.appendChild(newElement);
     });
 }
